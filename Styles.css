@@ -1,0 +1,103 @@
+/* Estilos comunes */
+*{
+    padding: 0;
+    margin: 1px;
+    box-sizing: border-box;
+    list-style: none;
+	justify-content: center;
+	align-items: center;
+    font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+body{ 
+    background:url(Fondo3.jpg);
+    background-size: 100%;
+  }
+  #cuerpo{
+    color: white;
+  }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    padding: 1rem;
+  }
+  
+  /* Estilos de celular */
+  @media all and (max-width: 700px) {
+  
+    /* Ocultar nav en la parte izquierda */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(0, 0, 0);
+      transform: translateX(-100vw);
+      transition: 0.5s;
+    }
+  
+    /* Mostrar nav */
+    .nav--show {
+      transform: translateX(0);
+    }
+  
+    .nav__button {
+      text-align: right;
+      margin: 1rem;
+    }
+  
+    .nav__ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+    }
+  
+    .nav__link {
+      display: block;
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  }
+  
+  /*Escritorio */
+  @media all and (min-width: 701px) {
+  
+    /* Ocultar botón de abrir o cerrar */
+    .nav__button,
+    .header__button-nav--open {
+      display: none;
+      color: rgb(0, 0, 0);
+    }
+  
+    /* Nav horizontal */
+    .nav__ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      color: rgb(0, 0, 0);
+    }
+  
+    .nav__link {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: rgb(255, 250, 250);
+      transition: 0.5s;
+    }
+  
+    .nav__link:hover {
+      opacity: 0.5;
+    }
+  }
+  
